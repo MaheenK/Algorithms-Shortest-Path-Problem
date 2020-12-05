@@ -11,7 +11,6 @@ class Graph():
         self.V = vertices
         self.graph = [[0 for column in range(vertices)]
                       for row in range(vertices)]
-
     def printSolution(self, dist):
         print("Vertex \tDistance from Source")
         for node in range(self.V):
@@ -35,9 +34,6 @@ class Graph():
                         dist[v] > dist[u] + self.graph[u][v]:
                     dist[v] = dist[u] + self.graph[u][v]
         self.printSolution(dist)
-
-
-# Driver program
 # g = Graph(5000)
 # g.graph = np.random.randint(5, size=(5000, 5000))
 # g.dijkstra(0)
